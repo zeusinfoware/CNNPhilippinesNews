@@ -1,0 +1,21 @@
+
+<ion-view view-title="">
+  <ion-content>
+  <ion-nav-bar class="bar-dark" style="background-color:#000;color:#fff">
+  <ion-nav-back-button ng-click="goBack();" class="button-clear"><i style="color:#fff" class="icon ion-chevron-left"></i> {{getSelectedTopic().text}}</ion-nav-back-button>
+  </ion-nav-bar>
+  <div  style="background-color:#1A1A1A;color:#fff">
+        <div ng-init="getNewsItem();">
+      <div >
+        <img style="width:100%;height:50%" src="{{selectedNewsItem.teaser[0].url}}" title="{{selectedNewsItem.teaser[0].title}}">
+      </div>
+      <div ng-bind-html="getStoryFormat(selectedNewsItem.title)" class="h2" style="color:#fff"></div>
+
+     
+      </div>
+      <div ng-bind-html="getStoryFormat(selectedNewsItem.body)">
+      
+      </div>
+      </div>
+  </ion-content>
+</ion-view>
